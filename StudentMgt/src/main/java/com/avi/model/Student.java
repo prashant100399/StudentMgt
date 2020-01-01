@@ -1,14 +1,23 @@
 package com.avi.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="student")
 public class Student {
 	
+	@Id
+	@GeneratedValue()
+	@Column(name="roll_no")
 	private int rollno;
+	@Column(name="name")
 	private String name;
+	@Column(name="address")
 	private String address;
 	
 	public Student() {
