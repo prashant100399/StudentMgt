@@ -21,7 +21,8 @@ public class Student {
 	private String address;
 	
 	public Student() {
-		super();
+		System.out.println("===============Enter into student model Constructor===========");
+		System.out.println("===============Exit from student model Constructor===========");
 	}
 
 	

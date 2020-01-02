@@ -2,6 +2,7 @@ package com.avi.StudentMgt;
 
 import org.hibernate.Session;
 
+import com.avi.dao.InsertData;
 import com.avi.util.SessionProvider;
 
 /**
@@ -10,11 +11,13 @@ import com.avi.util.SessionProvider;
  */
 public class App 
 {
-    public static void main( String[] args )
+    public static void main( String[] args )//throws Exception
     {
-        System.out.println( "Hello World!" );
-        SessionProvider sp=new SessionProvider();
-        		Session s=sp.getSessionObject();
-        		System.out.println(s.isOpen());
-;    }
+    	try {
+        InsertData id=new InsertData();
+        id.insertData();
+    	}catch(Exception p) {
+    		System.out.println(p.toString());
+    	}
+    }
 }
