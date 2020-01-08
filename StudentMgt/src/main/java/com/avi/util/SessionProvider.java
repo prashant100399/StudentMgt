@@ -13,7 +13,7 @@ public class SessionProvider {
 	
 	public SessionProvider() {
 		System.out.println("===============Enter into SessionProvider Constructor===========");
-//		sessionfactory=new Configuration().configure().buildSessionFactory();
+		sessionfactory=new Configuration().configure().buildSessionFactory();
 		session=sessionfactory.openSession();
 		System.out.println("===============Exit SessionProvider Constructor===========");			
 	}
