@@ -14,7 +14,7 @@ public class App
     public static void main( String[] args )//throws Exception
     {
     	try {
-        InsertData id=new InsertData();
+        InsertData id=new InsertData(); 
         id.insertData();
     	}catch(Exception p) {
     		System.out.println(p.toString());
