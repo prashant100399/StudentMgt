@@ -24,6 +24,17 @@ public class SessionProvider {
 		
 	}
 	
+	public void closeSessionFactory() {
+		sessionfactory.close();
+		System.out.println("===============Close SesssionFactory Successfully============");
+
+	}
+	
+	public void closeSession() {
+		session.close();
+		System.out.println("===============Close Sesssion Successfully===========");
+
+	}
 	
 
 }

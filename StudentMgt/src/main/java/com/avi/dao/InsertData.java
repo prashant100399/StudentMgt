@@ -40,7 +40,8 @@ public class InsertData {
 		
 	}
 	
-	public void insertData()throws Exception {
+	public void insertData() {
+		try{
 		getDatafromUser();
 		session=sessionprovider.getSessionObject();
 		transaction=session.beginTransaction();
@@ -49,7 +50,13 @@ public class InsertData {
 		System.out.println("===============Successfully insert record===========");
 		transaction.commit();
 		System.out.println("===============successfully commited===========");
-		
+		}catch(Exception e) {
+			transaction.rollback();
+		}finally {
+			
+			sessionprovider.closeSession();
+			sessionprovider.closeSessionFactory();
+		}
 		
 		
 	}
